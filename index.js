@@ -54,7 +54,6 @@ io.on('connection', (socket) => {
     for (var roomId of socket.rooms) {
       if (roomId !== socket.id) {
         positionMap[roomId][socket.id] = position;
-        // socket.to(roomId).emit(positionMap[roomId]);
       }
     }
   });
